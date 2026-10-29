@@ -1,0 +1,42 @@
+/* Values read from the supplied Pets 1280px Figma frame. */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#2d2d2d;--lavender:#f7f5fd;--yellow:#f8d57e;--blue:#36f;--mint:#f2faf8}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,sans-serif;font-size:18px;line-height:32px;color:var(--ink);background:#fff}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:3px solid var(--blue);outline-offset:6px}
+img{display:block;max-width:100%;height:auto}
+.container{max-width:1280px;margin:auto;padding-inline:100px}
+.header{height:100px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:inline-flex;flex-shrink:0}
+nav{display:flex;gap:30px;align-items:center}
+.button{display:inline-flex;align-items:center;justify-content:center;min-width:203px;min-height:64px;padding:16px 36px;background:var(--yellow);border-radius:10px;transition:filter .2s,transform .2s}
+.button:hover{filter:brightness(.96);transform:translateY(-2px)}
+.button-blue{min-width:153px;min-height:54px;padding:11px 30px;background:var(--blue);color:white}
+.hero{min-height:600px;background:var(--lavender);display:flex;flex-direction:column;align-items:center;text-align:center;padding:143px 24px}
+h1{font-size:80px;font-weight:600;line-height:90px;letter-spacing:-2px}
+.hero p{max-width:466px;margin:30px 0 40px;opacity:.7}
+.video-section{min-height:600px;display:flex;align-items:center;justify-content:center;background:var(--mint);padding:70px 24px}
+.video-preview{position:relative;width:765px;height:460px;border-radius:10px;overflow:hidden;background:#2d2d2d}
+.video-preview img{width:100%;height:100%;object-fit:cover}
+.video-preview:after{content:"";position:absolute;inset:0;background:linear-gradient(#2d2d2de6,#2d2d2d80)}
+.play{position:absolute;z-index:1;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-size:48px;line-height:1}
+.partners{min-height:400px;display:flex;align-items:center;justify-content:center}
+.partners img{width:935px;max-width:100%}
+.features{max-width:680px;min-height:728px;margin:auto;display:flex;flex-wrap:wrap;gap:40px;padding-block:40px}
+.feature{width:320px;min-height:304px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:30px 35px}
+.feature h2{font-size:18px;line-height:32px;font-weight:600;margin:30px 0 15px;white-space:nowrap}
+.feature p{opacity:.7}
+.testimonial{min-height:500px;background:#ece7fb;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:100px 24px;text-align:center}
+.testimonial blockquote{max-width:662px}
+.testimonial p{font-weight:600;margin:20px 0 40px}
+.testimonial cite{font-style:normal;opacity:.5}
+.contact{min-height:502px;background:var(--lavender);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 24px}
+.contact h2{font-size:80px;line-height:90px;font-weight:600;letter-spacing:-2px}
+.contact p{max-width:385px;margin:30px 0 40px;opacity:.7}
+.footer{min-height:135px;display:flex;gap:30px;align-items:center;justify-content:space-between;font-size:18px}
+.legal{display:flex;gap:30px;flex-wrap:wrap;justify-content:center}
+.socials{width:180px}
+@media(max-width:1000px){.container{padding-inline:40px}.footer{flex-wrap:wrap;padding-block:35px}.legal{order:3;width:100%}h1,.contact h2{font-size:62px;line-height:74px}.video-preview{height:auto;aspect-ratio:765/460}}
+@media(max-width:600px){.container{padding-inline:20px}.header{height:90px}.header .brand img{width:120px}.header nav{gap:15px}.header nav>a:first-child{font-size:14px}.button-blue{min-width:88px;padding:9px 20px;min-height:46px}.hero{min-height:570px;padding:80px 20px}h1,.contact h2{font-size:50px;line-height:60px;letter-spacing:-1px}.hero p{margin-top:30px}.video-section{min-height:320px;padding:50px 20px}.video-preview{aspect-ratio:320/220}.partners{min-height:240px}.partners img{width:100%}.features{max-width:360px;gap:0;padding-block:40px}.feature{width:100%;min-height:300px;padding-inline:55px}.testimonial{padding:80px 25px}.contact{min-height:500px}.footer{align-items:flex-start}.legal{flex-direction:column;gap:12px;font-size:16px}.socials{width:140px}.footer .brand img{width:135px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
