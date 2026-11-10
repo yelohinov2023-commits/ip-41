@@ -1,0 +1,65 @@
+:root {
+  --blue: #252775;
+  --link: #0076a8;
+  --paper: #f6f6f6;
+  --gap: 24px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: #333; background: #fff; font-family: Arial, sans-serif; line-height: 1.5; }
+a { color: var(--link); text-decoration: none; transition: color .2s ease; }
+a:hover { color: #004e70; }
+a:focus-visible { outline: 3px solid #f4b942; outline-offset: 5px; }
+.container { width: min(1170px, calc(100% - 40px)); margin-inline: auto; }
+.skip-link { position: absolute; top: -100px; left: 20px; padding: 10px; background: white; z-index: 10; }
+.skip-link:focus { top: 10px; }
+.site-bar { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-block: 25px; }
+.eyebrow { margin: 0 0 4px; color: #666; font-size: 10px; letter-spacing: .14em; }
+h1 { font-size: 24px; line-height: 1.2; color: var(--blue); margin: 0; }
+nav { display: flex; gap: 22px; flex-wrap: wrap; font-size: 14px; }
+#events_container { background: var(--blue); padding-block: 32px 40px; }
+.section-heading { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; }
+h2 { font-size: clamp(23px, 2.4vw, 28px); line-height: 1.25; font-weight: 500; margin: 0; }
+.section-heading > a { white-space: nowrap; font-size: 14px; text-decoration: underline; text-underline-offset: 5px; }
+#events_container .section-heading, #events_container .section-heading > a { color: white; }
+/* Flexbox: одна колонка за замовчуванням, перенесення на новий рядок. */
+.events-flex { display: flex; flex-wrap: wrap; align-items: stretch; gap: var(--gap); }
+.event-card { flex: 0 0 100%; }
+.card { min-width: 0; background: var(--paper); animation: appear .55s ease both; transition: transform .25s ease, box-shadow .25s ease; }
+.card > a { display: flex; flex-direction: column; height: 100%; }
+.image-wrap { overflow: hidden; aspect-ratio: 16 / 9; background: #e5e5e5; }
+img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+.date { margin: 14px 16px 8px; font-size: 12px; line-height: 1.45; color: #59646a; }
+h3 { font-size: 17px; line-height: 1.35; margin: 0; padding: 0 16px 20px; overflow-wrap: anywhere; }
+.main-container { padding-block: 40px 48px; }
+.main-container h2 { color: var(--link); }
+/* Grid: розміщення новин по рядках і колонках. */
+.news-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px var(--gap); align-items: stretch; }
+.news-card:nth-child(2n) { animation-delay: .06s; }
+.site-footer { border-top: 1px solid #ddd; padding-block: 20px 28px; font-size: 12px; color: #666; }
+.site-footer p { margin: 4px 0; }
+@media (hover: hover) {
+  .card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px #0002; }
+  .card:hover img { transform: scale(1.035); }
+}
+@keyframes appear { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+/* Mobile: до 767 px — одна колонка. */
+@media (max-width: 767px) {
+  .site-bar { align-items: flex-start; flex-direction: column; }
+  h1 { font-size: 22px; }
+}
+/* Tablet: 768–1023 px — дві колонки. */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .event-card { flex-basis: calc((100% - var(--gap)) / 2); }
+  .news-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+/* Desktop: від 1024 px — чотири колонки. */
+@media (min-width: 1024px) {
+  .event-card { flex-basis: calc((100% - 3 * var(--gap)) / 4); }
+  .news-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .card:hover, .card:hover img { transform: none; }
+}
