@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Лабораторна робота 7. Адаптивна верстка подій і новин Львівської політехніки. Варіант 1.">
+  <title>Події та новини | Lab7 · Львівська політехніка</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#news">Перейти до новин</a>
+  <div class="site-bar container">
+    <div><p class="eyebrow">НАЦІОНАЛЬНИЙ УНІВЕРСИТЕТ</p><h1>Львівська політехніка</h1></div>
+    <nav aria-label="Навігація сторінкою"><a href="../index.html">До робіт</a><a href="#events_container">Події</a><a href="#news">Новини</a></nav>
+  </div>
+  <!-- Варіант 1: header#events_container, розкладка на Flexbox. -->
+  <header id="events_container" aria-labelledby="events-title">
+    <div class="container">
+      <div class="section-heading"><h2 id="events-title">Незабаром у Львівській політехніці</h2><a href="https://lpnu.ua/events">Усі події <span aria-hidden="true">↗</span></a></div>
+      <div class="events-flex">
+      <article class="card event-card">
+        <a href="https://lpnu.ua/events/140-rokiv-vid-dnia-narodzhennia-sofii-albinovskoi-minkevych">
+          <div class="image-wrap"><img src="images/events-1.jpg" alt="140 років від дня народження Софії Альбіновської-Мінкевич" width="720" height="405" loading="eager"></div>
+          <p class="date">вт., 10 листоп., 11:00 – вт., 10 листоп., 17:00</p>
+          <h3>140 років від дня народження Софії Альбіновської-Мінкевич</h3>
+        </a>
+      </article>
+      <article class="card event-card">
+        <a href="https://lpnu.ua/events/40-i-yarmarok-kariery-2026-u-lvivskii-politekhnitsi">
+          <div class="image-wrap"><img src="images/events-2.jpg" alt="40-й Ярмарок кар&#x27;єри 2026 у Львівській політехніці" width="720" height="405" loading="eager"></div>
+          <p class="date">ср., 11 листоп., 10:00 – ср., 11 листоп., 15:00</p>
+          <h3>40-й Ярмарок кар&#x27;єри 2026 у Львівській політехніці</h3>
+        </a>
+      </article>
+      <article class="card event-card">
+        <a href="https://lpnu.ua/events/ukrainske-slovo-obiednuie-lvivska-politekhnika-zaproshuie-studentiv-do-uchasti-v-movnykh">
+          <div class="image-wrap"><img src="images/events-3.jpg" alt="Українське слово об’єднує: Львівська політехніка запрошує студентів до участі в мовних конкурсах" width="720" height="405" loading="eager"></div>
+          <p class="date">ср., 11 листоп., 15:00 – ср., 11 листоп., 18:00</p>
+          <h3>Українське слово об’єднує: Львівська політехніка запрошує студентів до участі в мовних конкурсах</h3>
+        </a>
+      </article>
+      <article class="card event-card">
+        <a href="https://lpnu.ua/events/kruhlyi-stil-istoriia-vyvchennia-oblikovo-ekonomichnykh-dystsyplin-u-lvivskii-politekhnitsi">
+          <div class="image-wrap"><img src="images/events-4.jpg" alt="Круглий стіл «Історія вивчення обліково-економічних дисциплін у Львівській політехніці за період 1816–2025 років»" width="720" height="405" loading="eager"></div>
+          <p class="date">чт., 12 листоп., 14:00 – чт., 12 листоп., 18:00</p>
+          <h3>Круглий стіл «Історія вивчення обліково-економічних дисциплін у Львівській політехніці за період 1816–2025 років»</h3>
+        </a>
+      </article>
+      <article class="card event-card">
+        <a href="https://lpnu.ua/events/mizhnarodna-naukovo-praktychna-konferentsiia-spilno-dlia-predkiv-prykordonnia-nasha-spilna">
+          <div class="image-wrap"><img src="images/events-5.jpg" alt="Міжнародна науково-практична конференція «Спільно для предків — Прикордоння: наша спільна спадщина. Роль волонтерства у збереженні культурної спадщини»" width="720" height="405" loading="lazy"></div>
+          <p class="date">пт., 13 листоп., 10:00 – сб., 14 листоп., 15:00</p>
+          <h3>Міжнародна науково-практична конференція «Спільно для предків — Прикордоння: наша спільна спадщина. Роль волонтерства у збереженні культурної спадщини»</h3>
+        </a>
+      </article>
+      <article class="card event-card">
+        <a href="https://lpnu.ua/events/vid-radiolokatsii-ta-navihatsii-do-intelektualnykh-system-kafedra-rets-zaproshuie-na-den">
+          <div class="image-wrap"><img src="images/events-6.jpg" alt="Від радіолокації та навігації до інтелектуальних систем: кафедра РЕТС запрошує на День відкритих дверей" width="720" height="405" loading="lazy"></div>
+          <p class="date">пт., 13 листоп., 11:00 – пт., 13 листоп., 16:00</p>
+          <h3>Від радіолокації та навігації до інтелектуальних систем: кафедра РЕТС запрошує на День відкритих дверей</h3>
+        </a>
+      </article>
+      </div>
+    </div>
+  </header>
+  <main class="main-container container" id="news">
+    <section aria-labelledby="news-title">
+      <div class="section-heading"><h2 id="news-title">Новини університету</h2><a href="https://lpnu.ua/news">Усі новини <span aria-hidden="true">↗</span></a></div>
+      <!-- CSS Grid: 1 / 2 / 4 колонки залежно від ширини екрана. -->
+      <div class="news-grid">
+      <article class="card news-card">
+        <a href="https://lpnu.ua/news/13-molodykh-uchenykh-lvivskoi-politekhniky-otrymaiut-stypendii-kabinetu-ministriv-ukrainy">
+          <div class="image-wrap"><img src="images/news-1.jpg" alt="13 молодих учених Львівської політехніки отримають стипендії Кабінету Міністрів України" width="720" height="405" loading="lazy"></div>
+          <p class="date">10 ЛИСТОП. 2026, 12:05</p>
+          <h3>13 молодих учених Львівської політехніки отримають стипендії Кабінету Міністрів України</h3>
+        </a>
+      </article>
+      <article class="card news-card">
+        <a href="https://lpnu.ua/news/politychna-zaanhazhovanist-ne-povynna-pidminiaty-istorychnyi-analiz-rozmova-z-ivannoiu">
+          <div class="image-wrap"><img src="images/news-2.jpg" alt="«Політична заангажованість не повинна підміняти історичний аналіз»: розмова з Іванною Чернецькою — переможницею 84-ї студентської науково-технічної конференції ІГСН" width="720" height="405" loading="lazy"></div>
+          <p class="date">10 ЛИСТОП. 2026, 11:20</p>
+          <h3>«Політична заангажованість не повинна підміняти історичний аналіз»: розмова з Іванною Чернецькою — переможницею 84-ї студентської науково-технічної конференції ІГСН</h3>
+        </a>
+      </article>
+      <article class="card news-card">
+        <a href="https://lpnu.ua/news/zoloto-icpc-na-pershomu-kursi-istoriia-studenta-kafedry-pz-antona-perebyinosa">
+          <div class="image-wrap"><img src="images/news-3.jpg" alt="Золото ICPC на першому курсі: історія студента кафедри ПЗ Антона Перебийноса" width="720" height="405" loading="lazy"></div>
+          <p class="date">10 ЛИСТОП. 2026, 10:13</p>
+          <h3>Золото ICPC на першому курсі: історія студента кафедри ПЗ Антона Перебийноса</h3>
+        </a>
+      </article>
+      <article class="card news-card">
+        <a href="https://lpnu.ua/news/krok-do-maibutnoho-dni-politekhniky-zavitaly-do-shkoly-no-9-lvova">
+          <div class="image-wrap"><img src="images/news-4.jpg" alt="Крок до майбутнього: «Дні Політехніки» завітали до школи № 9 Львова" width="720" height="405" loading="lazy"></div>
+          <p class="date">9 ЛИСТОП. 2026, 16:52</p>
+          <h3>Крок до майбутнього: «Дні Політехніки» завітали до школи № 9 Львова</h3>
+        </a>
+      </article>
+      <article class="card news-card">
+        <a href="https://lpnu.ua/events/vid-radiolokatsii-ta-navihatsii-do-intelektualnykh-system-kafedra-rets-zaproshuie-na-den">
+          <div class="image-wrap"><img src="images/news-5.jpg" alt="Від радіолокації та навігації до інтелектуальних систем: кафедра РЕТС запрошує на День відкритих дверей" width="720" height="405" loading="lazy"></div>
+          <p class="date">9 ЛИСТОП. 2026, 15:50</p>
+          <h3>Від радіолокації та навігації до інтелектуальних систем: кафедра РЕТС запрошує на День відкритих дверей</h3>
+        </a>
+      </article>
+      <article class="card news-card">
+        <a href="https://lpnu.ua/news/roboty-shcho-zminiuiut-misto-u-lvivskii-politekhnitsi-vidbuvsia-festyval-robototekhniky">
+          <div class="image-wrap"><img src="images/news-6.jpg" alt="Роботи, що змінюють місто: у Львівській політехніці відбувся фестиваль робототехніки" width="720" height="405" loading="lazy"></div>
+          <p class="date">9 ЛИСТОП. 2026, 15:10</p>
+          <h3>Роботи, що змінюють місто: у Львівській політехніці відбувся фестиваль робототехніки</h3>
+        </a>
+      </article>
+      <article class="card news-card">
+        <a href="https://lpnu.ua/news/u-lvivskii-politekhnitsi-vidbulysia-hostovi-lektsii-profesora-miunkhenskoho-tekhnichnoho">
+          <div class="image-wrap"><img src="images/news-7.jpg" alt="У Львівській політехніці відбулися гостьові лекції професора Мюнхенського технічного університету" width="720" height="405" loading="lazy"></div>
+          <p class="date">9 ЛИСТОП. 2026, 14:15</p>
+          <h3>У Львівській політехніці відбулися гостьові лекції професора Мюнхенського технічного університету</h3>
+        </a>
+      </article>
+      <article class="card news-card">
+        <a href="https://lpnu.ua/events/mizhnarodna-naukovo-praktychna-konferentsiia-spilno-dlia-predkiv-prykordonnia-nasha-spilna">
+          <div class="image-wrap"><img src="images/news-8.jpg" alt="Міжнародна науково-практична конференція «Спільно для предків — Прикордоння: наша спільна спадщина. Роль волонтерства у збереженні культурної спадщини»" width="720" height="405" loading="lazy"></div>
+          <p class="date">9 ЛИСТОП. 2026, 12:51</p>
+          <h3>Міжнародна науково-практична конференція «Спільно для предків — Прикордоння: наша спільна спадщина. Роль волонтерства у збереженні культурної спадщини»</h3>
+        </a>
+      </article>
+      <article class="card news-card">
+        <a href="https://lpnu.ua/news/tanho-shcho-zvuchyt-zarady-zhyttia-polifoniia-zaproshuie-na-blahodiinyi-kontsert-na-pidtrymku">
+          <div class="image-wrap"><img src="images/news-9.jpg" alt="Танго, що звучить заради життя. «Поліфонія» запрошує на благодійний концерт на підтримку військових" width="720" height="405" loading="lazy"></div>
+          <p class="date">9 ЛИСТОП. 2026, 12:17</p>
+          <h3>Танго, що звучить заради життя. «Поліфонія» запрошує на благодійний концерт на підтримку військових</h3>
+        </a>
+      </article>
+      <article class="card news-card">
+        <a href="https://lpnu.ua/news/studenttsi-kafedry-afm-yani-ferents-pryznacheno-akademichnu-stypendiiu-prezydenta-ukrainy">
+          <div class="image-wrap"><img src="images/news-10.jpg" alt="Студентці кафедри АФМ Яні Ференц призначено академічну стипендію Президента України" width="720" height="405" loading="lazy"></div>
+          <p class="date">9 ЛИСТОП. 2026, 11:51</p>
+          <h3>Студентці кафедри АФМ Яні Ференц призначено академічну стипендію Президента України</h3>
+        </a>
+      </article>
+      <article class="card news-card">
+        <a href="https://lpnu.ua/news/vid-naukovoi-idei-do-hrantovoi-zaiavky-u-lvivskii-politekhnitsi-diie-shkola-erc">
+          <div class="image-wrap"><img src="images/news-11.jpg" alt="Від наукової ідеї до грантової заявки: у Львівській політехніці діє Школа ERC" width="720" height="405" loading="lazy"></div>
+          <p class="date">9 ЛИСТОП. 2026, 11:31</p>
+          <h3>Від наукової ідеї до грантової заявки: у Львівській політехніці діє Школа ERC</h3>
+        </a>
+      </article>
+      <article class="card news-card">
+        <a href="https://lpnu.ua/events/lvivska-politekhnika-zaproshuie-studentiv-na-v-zahalnouniversytetsku-olimpiadu-z-inzhenernoi">
+          <div class="image-wrap"><img src="images/news-12.jpg" alt="Львівська політехніка запрошує студентів на V загальноуніверситетську олімпіаду з інженерної та комп’ютерної графіки" width="720" height="405" loading="lazy"></div>
+          <p class="date">9 ЛИСТОП. 2026, 10:39</p>
+          <h3>Львівська політехніка запрошує студентів на V загальноуніверситетську олімпіаду з інженерної та комп’ютерної графіки</h3>
+        </a>
+      </article>
+      </div>
+    </section>
+  </main>
+  <footer class="container site-footer"><p>Лабораторна робота 7 · Варіант 1 · Євгеній Логінов · ІП41</p><p>Навчальне відтворення. Матеріали та фото: <a href="https://lpnu.ua/">lpnu.ua</a>, 10 листопада 2026.</p></footer>
+</body>
+</html>
