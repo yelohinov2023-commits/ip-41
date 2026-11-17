@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="World Trivia: discover curious facts, explore categories and challenge yourself with a daily puzzle.">
+  <title>World Trivia — A little curiosity every day</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="brand"><span aria-hidden="true">◎</span> WORLD TRIVIA</div>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#trivia">Trivia</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#scores">Scores</a></li>
+        <li><a href="#subscribe">Subscribe</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
+    <section id="home">
+      <p class="eyebrow">A LITTLE CURIOSITY EVERY DAY</p>
+      <h1>Big world.<br>Small discoveries.</h1>
+      <p class="intro">Welcome to World Trivia. Explore surprising facts about our planet, travel through history, and find your next favourite question.</p>
+      <a class="button" href="#trivia">Explore the facts <span aria-hidden="true">↗</span></a>
+      <p class="note">Learn something new. Share a little wonder.</p>
+    </section>
+    <section id="trivia" aria-labelledby="trivia-title">
+      <p class="eyebrow">THE DISCOVERY DESK</p>
+      <h2 id="trivia-title">Three things worth knowing</h2>
+      <article class="trivia-card" id="geography">
+        <img src="images/earth.svg" width="150" height="150" alt="Illustration of Earth with blue oceans and green continents">
+        <div><p class="tag">01 / GEOGRAPHY</p><h3>A planet of water</h3><p>About 71% of Earth's surface is covered by water. The oceans connect continents and help regulate our climate.</p><a href="https://www.usgs.gov/special-topics/water-science-school/science/how-much-water-there-earth">Explore the source at USGS</a></div>
+      </article>
+      <article class="trivia-card" id="science">
+        <img src="images/sun.svg" width="150" height="150" alt="Illustration of the Sun and the path of sunlight towards Earth">
+        <div><p class="tag">02 / SCIENCE</p><h3>Sunlight takes a journey</h3><p>Light from the Sun takes about eight minutes to reach Earth. Looking at sunshine means seeing light that began its journey minutes ago.</p><a href="https://science.nasa.gov/sun/facts/">Explore the source at NASA</a></div>
+      </article>
+      <article class="trivia-card" id="history">
+        <img src="images/books.svg" width="150" height="150" alt="Illustration of books and a printing press page">
+        <div><p class="tag">03 / HISTORY</p><h3>Ideas on the move</h3><p>Johannes Gutenberg's printing work in 15th-century Europe helped books reach a much wider audience, changing how knowledge travelled.</p><a href="https://www.bl.uk/collection-items/gutenberg-bible">Explore the Gutenberg Bible</a></div>
+      </article>
+    </section>
+    <section id="categories" aria-labelledby="categories-title">
+      <p class="eyebrow">FOLLOW YOUR CURIOSITY</p><h2 id="categories-title">Choose a category</h2>
+      <ul class="category-list"><li><a href="#geography">Geography <span aria-hidden="true">↗</span></a></li><li><a href="#science">Science <span aria-hidden="true">↗</span></a></li><li><a href="#history">History <span aria-hidden="true">↗</span></a></li></ul>
+    </section>
+    <section id="scores" aria-labelledby="scores-title">
+      <p class="eyebrow">THE LEADERBOARD</p><h2 id="scores-title">Every question counts</h2>
+      <p>Example results from our fictional World Trivia community.</p>
+      <div class="table-scroll" role="region" aria-label="Scores table, scroll horizontally on small screens" tabindex="0">
+        <table><caption>Sample player scores — November 2026</caption><thead><tr><th scope="col">Rank</th><th scope="col">Name</th><th scope="col">Score</th><th scope="col">Country</th><th scope="col">Category</th><th scope="col">Date</th></tr></thead>
+        <tbody><tr><td>1</td><th scope="row">Olena</th><td>980</td><td>Ukraine</td><td>Science</td><td><time datetime="2026-11-17">17 Nov 2026</time></td></tr><tr><td>2</td><th scope="row">Alex</th><td>940</td><td>Canada</td><td>Geography</td><td><time datetime="2026-11-16">16 Nov 2026</time></td></tr><tr><td>3</td><th scope="row">Marta</th><td>910</td><td>Poland</td><td>History</td><td><time datetime="2026-11-15">15 Nov 2026</time></td></tr></tbody></table>
+      </div>
+    </section>
+    <section id="subscribe" aria-labelledby="subscribe-title">
+      <div><p class="eyebrow">MAKE CURIOSITY A HABIT</p><h2 id="subscribe-title">Puzzle of the Day</h2><p>Keep a daily puzzle reminder enabled in this browser.</p><p class="note">This demo saves your preference on this device. It does not send emails or notifications.</p></div>
+      <div><button id="subscribe-button" type="button" aria-pressed="false">Subscribe to Puzzle of the Day</button><p id="subscribe-status" role="status"></p></div>
+    </section>
+    <section id="contact" aria-labelledby="contact-title">
+      <p class="eyebrow">LET'S TALK TRIVIA</p><h2 id="contact-title">Have a curious question?</h2>
+      <p>Suggest a topic or share your feedback.</p>
+      <form id="contact-form" aria-describedby="form-note">
+        <p id="form-note" class="note">Demo form: your message is checked locally and is not sent or stored.</p>
+        <label for="name">Name <span class="sr-only">(required)</span></label><input id="name" name="name" autocomplete="name" maxlength="100" required>
+        <label for="email">Email <span class="sr-only">(required)</span></label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required>
+        <label for="message">Message <span class="sr-only">(required)</span></label><textarea id="message" name="message" rows="5" maxlength="2000" required></textarea>
+        <button type="submit">Send message <span class="sr-only">in demo mode</span></button><p id="contact-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+  <footer><strong>WORLD TRIVIA</strong><p>Stay curious. The world has more to tell.</p><p>© 2026 World Trivia · Educational project by Yevhenii Lohinov, IP41</p><a href="#home">Back to top ↑</a></footer>
+</body>
+</html>
