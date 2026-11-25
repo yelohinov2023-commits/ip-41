@@ -1,0 +1,9 @@
+{
+  "name": "lab8-scss",
+  "private": true,
+  "scripts": {
+    "build": "sass --source-map scss:css",
+    "watch": "sass --watch scss:css"
+  },
+  "devDependencies": { "sass": "1.93.2" }
+}
